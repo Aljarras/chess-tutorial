@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400&family=Alatsi&display=swap');
+
+:root {
+	--font-aleo: 'Aleo', serif;
+	--font-alatsi: 'Alatsi', sans-serif;
+}
+
+.font-aleo-regular {
+	font-family: var(--font-aleo);
+	font-weight: 400;
+}
+
+.font-alatsi-regular {
+	font-family: var(--font-alatsi);
+	font-weight: 400;
+}
