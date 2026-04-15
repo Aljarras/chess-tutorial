@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { openings } from "../data/openings";
 import { MobileLayout } from "../components/MobileLayout";
 import { useProgress } from "../context/ProgressContext";
+import { OpeningThumbnail } from "../components/OpeningThumbnail";
 
 export function Progress() {
   const navigate = useNavigate();
@@ -38,10 +39,10 @@ export function Progress() {
                   key={opening.id}
                   onClick={() => !isCompleted && handleSelectOpening(opening.id)}
                   disabled={isCompleted}
-                  className={`w-full p-6 border-2 border-[#9fbaa9] text-left transition-all rounded-[5px] relative ${
+                  className={`w-full block appearance-none p-6 border-2 border-[#9fbaa9] text-left rounded-[5px] relative transform-gpu transition-all duration-200 ${
                     isCompleted
                       ? "bg-[#b3cabc] cursor-default opacity-75"
-                      : "bg-white hover:bg-[#dce3d8] hover:transform hover:scale-105"
+                      : "bg-white hover:bg-[#dce3d8] hover:scale-[1.02] hover:shadow-lg hover:z-10"
                   }`}
                 >
                   {isCompleted && (
@@ -49,10 +50,8 @@ export function Progress() {
                       ✓
                     </div>
                   )}
-                  <div className="border-2 border-[#9fbaa9] bg-[#b3cabc] h-32 mb-4 flex items-center justify-center rounded-[5px]">
-                    <span className="text-[#5d7970] text-sm">
-                      [{opening.name} Thumbnail]
-                    </span>
+                  <div className="mb-4 flex justify-center">
+                    <OpeningThumbnail opening={opening} className="w-full max-w-[300px]" />
                   </div>
                   <h2 className="font-aleo-regular text-xl mb-2 text-[#1e392e]">{opening.name}</h2>
                   <p className="text-sm text-[#85997c]">

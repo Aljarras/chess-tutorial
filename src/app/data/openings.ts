@@ -67,10 +67,10 @@ export const openings: Opening[] = [
       },
       {
         stepNumber: 4,
-        title: "Develop pieces",
+        title: "Check with the Queen",
         description:
-          "Continue developing knights and bishops while keeping the Queen safe from attacks.",
-        notation: "3.Nc3 Qa5",
+          "After White develops Nc3, move your Queen to e5 to give check on the White king.",
+        notation: "3.Nc3 Qe5+",
       },
     ],
     practiceScenarios: [
@@ -98,13 +98,13 @@ export const openings: Opening[] = [
       },
       {
         id: "scand-practice-3",
-        description: "White is attacking your Queen with their knight. Move it to safety and check the king",
+        description: "White is attacking your Queen with their knight. Move to e5 and check the king",
         attackedPiece: "Queen",
         attackingPiece: "Queen",
         correctMove: { from: "d5", to: "e5" },
         opponentResponse: undefined, // No response needed - this is the last move
         highlightSquares: ["e5"],
-        hint: "Move your Queen to e5 to check the king along the open e-file",
+        hint: "Move your Queen to e5 to check the king along the e-file",
         initialFen: "rnb1kbnr/ppp1pppp/8/3q4/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 3",
       },
     ],

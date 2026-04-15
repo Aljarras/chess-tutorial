@@ -31,7 +31,7 @@ const STEP_ANIMATIONS: Record<string, Record<number, AnimationStep>> = {
     4: {
       initialFen: "rnb1kbnr/ppp1pppp/8/3q4/8/2N5/PPPP1PPP/R1BQKBNR b KQkq - 1 3",
       from: "d5",
-      to: "a5",
+      to: "e5",
     },
   },
   london: {

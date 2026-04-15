@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "build": "vite build && node scripts/postbuild-phoenix.mjs",
+    "dev": "vite",
+    "package:phoenix": "npm run build && node scripts/package-phoenix.mjs"
   },
   "dependencies": {
     "react": "18.3.1",
